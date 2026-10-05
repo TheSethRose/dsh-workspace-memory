@@ -3,8 +3,8 @@ import { z } from 'zod';
 import { defineDomain, domainTable } from '@deepseek-ai/dsh-storage-domain';
 import { defineTool } from '@deepseek-ai/dsh-tools';
 import { renderContextSections } from '@deepseek-ai/dsh-system-prompt';
-import core from './core-runtime-b0a4a82dab5d2955.cjs';
-import embeddings from './embeddings-runtime-b0a4a82dab5d2955.cjs';
+import core from './core-runtime-e4b9ae6108439894.cjs';
+import embeddings from './embeddings-runtime-e4b9ae6108439894.cjs';
 const { MemoryStore, retrieve, renderContext, eligibleRecords, assertGlobalKind } = core;
 const { LocalEmbeddingClient, createSemanticScorer } = embeddings;
 export const name = 'workspace-memory';
@@ -12,7 +12,7 @@ export const inject = ['storageDomain', 'workspaceRegistry', 'agents', 'tools', 
 const source = z.object({session:z.string().optional(),message:z.string().optional(),origin:z.string().optional()}).strict();
 const snapshot = z.object({id:z.string(),workspaceId:z.string(),title:z.string().min(1).max(240),content:z.string().min(1).max(32000),kind:z.enum(core.KINDS),status:z.enum(core.STATUSES),enabled:z.boolean(),pinned:z.boolean(),source,expiresAt:z.string().nullable(),supersedes:z.string().nullable(),revision:z.number().int().positive(),createdAt:z.string(),updatedAt:z.string()}).strict();
 const settingsSchema = z.object({enabled:z.boolean(),suggestions:z.boolean(),budgetChars:z.number().int().min(1000).max(64000),excluded:z.array(z.string()).max(1000),semantic:z.boolean(),semanticThreshold:z.number().min(0).max(1)}).strict();
-const defaults = {enabled:true,suggestions:true,budgetChars:8000,excluded:[],semantic:true,semanticThreshold:0.5};
+const defaults = {enabled:true,suggestions:true,budgetChars:8000,excluded:[],semantic:true,semanticThreshold:0.55};
 // Global memory reuses the memories table under a reserved scope id. No real
 // workspace can hold it (workspace ids are UUIDs and the global store accepts
 // nothing else), so the two scopes can never read each other's records.

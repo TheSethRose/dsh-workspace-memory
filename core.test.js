@@ -226,7 +226,7 @@ test('semantic candidates survive zero lexical overlap; threshold abstains stric
   const result = retrieve(records, 'banana', { semanticScores: [semanticFor(related), semanticFor(unrelated, 0.2)] });
   assert.deepEqual(ids(result), [related.id]);
   assert.deepEqual(result.reasons, [{ id: related.id, reason: 'semantic', score: 3.6 }]);
-  for (const score of [-1, 0, 0.44, 0.45]) {
+  for (const score of [-1, 0, 0.5, 0.54]) {
     const abstained = retrieve(records, 'banana', { semanticScores: [semanticFor(related, score)] });
     assert.deepEqual(ids(abstained), []);
     assert.deepEqual(abstained.overflow.records, []);
@@ -234,6 +234,19 @@ test('semantic candidates survive zero lexical overlap; threshold abstains stric
   assert.deepEqual(ids(retrieve(records, 'banana', { semanticScores: [semanticFor(related, 1)], semanticThreshold: 1 })), []);
   assert.deepEqual(ids(retrieve(records, 'banana', { semanticScores: [semanticFor(related, 0.1)], semanticThreshold: 0 })), [related.id]);
   assert.deepEqual(ids(retrieve(records, 'banana', { semanticScores: [semanticFor(related, 0)], semanticThreshold: 0 })), []);
+});
+
+test('the default semantic threshold is calibrated, not guessed', async () => {
+  const { store } = setup();
+  const record = await confirmed(store, { title: 'Orchard apple', content: 'Apples from the orchard.' });
+  const semanticFor = score => [{ id: record.id, revision: record.revision, score }];
+  // Measured: unrelated-query top-1 cosine peaks at 0.5409 on a real project
+  // corpus and 0.4717 on the authored corpus, while the weakest relevant match
+  // scores 0.5754. 0.50 admitted 2 of 10 real unrelated queries; 0.55 admits none
+  // and keeps every relevant top-1; 0.60 starts dropping relevant matches.
+  assert.deepEqual(ids(retrieve(store.list('one'), 'unrelated question', { semanticScores: semanticFor(0.54) })), []);
+  assert.deepEqual(ids(retrieve(store.list('one'), 'unrelated question', { semanticScores: semanticFor(0.56) })), [record.id]);
+  assert.deepEqual(ids(retrieve(store.list('one'), 'unrelated question')), [], 'no scores means no semantic match');
 });
 
 test('semantic revision must match fresh records and cannot suppress lexical matches', async () => {

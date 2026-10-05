@@ -19,7 +19,7 @@ The approved local model **`nomic-embed-text:v1.5`** (Ollama, 274 MB, 768 dimens
 3. **Local backend** — configured and verified on this machine, exposed read-only in the settings card.
 4. **Semantic benchmark** — measured on the authored diagnostic corpus, below.
 
-[core.js](./core.js) accepts optional `semanticScores` (`{id, revision, score}`) and applies a documented additive hybrid score: `lexical + 4 × distinctKeywords × cosine`, only for scores strictly above `semanticThreshold` (default 0.5) whose `revision` matches the current record. Pins still rank first, and the exact ASCII frame budget, limit, overflow, approval, expiry, enablement, and supersession gates are unchanged. `eligibleRecords()` is exported so asynchronous scoring never sees ineligible records.
+[core.js](./core.js) accepts optional `semanticScores` (`{id, revision, score}`) and applies a documented additive hybrid score: `lexical + 4 × distinctKeywords × cosine`, only for scores strictly above `semanticThreshold` (default **0.55**, calibrated in the threshold section below) whose `revision` matches the current record. Pins still rank first, and the exact ASCII frame budget, limit, overflow, approval, expiry, enablement, and supersession gates are unchanged. `eligibleRecords()` is exported so asynchronous scoring never sees ineligible records.
 
 Request-time orchestration happens in the `system-prompt/assemble` waterfall, which is the first hook that permits asynchronous work; the synchronous context provider still supplies the lexical text so a slow or missing service can never block or empty a prompt. Failures enter a 30-second cooldown, fall back to keywords, and are disclosed as `fallback`.
 
@@ -36,7 +36,41 @@ Request-time orchestration happens in the `system-prompt/assemble` waterfall, wh
 
 This clears the previously proposed engineering gate (≥7/8 concise-paraphrase recall, ≥6/8 top-1, 8/8 exact) for paraphrase recall and top-1, and top-1 for natural paraphrases except one case. **The negative-query result does not clear the gate**: two unrelated questions still returned records, and natural paraphrases pull in many extra records. The corpus is small and authored, not a random sample, so this is a diagnostic, not an accuracy claim.
 
-Known limits, stated plainly: precision is weaker than recall (`natural-paraphrase` selections can include most of the corpus), one negative query crossed the threshold, the model window is limited and long records are embedded from a 6,000-character prefix rather than chunked and merged, and vectors live in memory so the first request after a restart re-embeds the workspace. Raise the threshold for precision, lower it for recall, or turn meaning search off entirely; the settings card exposes all three choices per workspace or per session.
+Known limits, stated plainly: precision is weaker than recall (`natural-paraphrase` selections can include most of the corpus), the unrelated-query ceiling sits only about 0.03 below the weakest relevant match on a real corpus (see the calibration section below), the model window is limited and long records are embedded from a 6,000-character prefix rather than chunked and merged, and vectors live in memory so the first request after a restart re-embeds the workspace. Raise the threshold for precision, lower it for recall, or turn meaning search off entirely; the settings card exposes all three choices per workspace or per session.
+
+### Threshold calibration (2026-10-05)
+
+Re-measured against the installed model so the default is calibrated rather than guessed. Semantic-only cosine, sweep 0.40–0.70.
+
+Authored corpus (8 records, 20 queries, 5 unrelated negatives):
+
+| Threshold | Exact recall/top-1 | Concise recall/top-1 | Natural recall/top-1 | Negatives selected |
+| --- | --- | --- | --- | --- |
+| 0.50 | 8/8 | 8/8 | 4/4 | 0/5 |
+| 0.55 | 8/8 | 7/7 | 4/4 | 0/5 |
+| 0.60 | 8/8 | 4/4 | 4/4 | 0/5 |
+| 0.65 | 8/8 | 0/0 | 0/0 | 0/5 |
+
+Highest unrelated-query top-1 cosine: **0.4717**.
+
+Real project corpus (7 eligible records — 6 workspace + 1 global — with 7 on-topic queries and 10 unrelated queries):
+
+| Threshold | Positive top-1 | Unrelated queries selecting anything |
+| --- | --- | --- |
+| 0.40 | 7/7 | 10/10 |
+| 0.45 | 7/7 | 6/10 |
+| 0.50 | 7/7 | 2/10 |
+| **0.55** | **7/7** | **0/10** |
+| 0.60 | 5/7 | 0/10 |
+| 0.65 | 4/7 | 0/10 |
+
+Highest unrelated-query top-1 cosine: **0.5409** (`how do I tune a guitar` → the short global writing-style entry). Weakest relevant top-1: **0.5754**. Every on-topic query ranked its intended record first, so recall did not depend on the threshold until 0.60.
+
+**The default moved from 0.50 to 0.55.** It is the only swept value with zero unrelated selections and full positive top-1 on the real corpus; on the authored corpus it costs one concise-paraphrase case, and 0.60 and above start dropping relevant matches on both.
+
+Two honest notes. The `2/5 selected` negative row in the production table above was measured in a different machine state; this re-run measured **0/5 at 0.50**, so treat that row as superseded by this sweep. And the real-corpus false positive at 0.5409 is a hubness effect — short, generic entries attract unrelated queries — which a single global cosine cutoff can only partly correct.
+
+`node nomic-embedding-evaluation.cjs` reproduces the authored sweep. The real-corpus sweep reads the profile's storage domain, so it is deliberately not committed.
 
 ## Installed local-model search and the Apple benchmark
 

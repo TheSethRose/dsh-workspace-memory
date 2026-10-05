@@ -9,7 +9,7 @@ const { Readable } = require('node:stream');
 const { pathToFileURL } = require('node:url');
 const path = require('node:path');
 const clone = value => structuredClone(value);
-const SETTINGS = { enabled: true, suggestions: true, budgetChars: 8000, excluded: [], semantic: false, semanticThreshold: 0.5 };
+const SETTINGS = { enabled: true, suggestions: true, budgetChars: 8000, excluded: [], semantic: false, semanticThreshold: 0.55 };
 
 async function createHarness(options = {}) {
   const host = await import(pathToFileURL(path.join(__dirname, 'host.mjs')).href);

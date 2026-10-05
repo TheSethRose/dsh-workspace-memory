@@ -11,7 +11,7 @@ export const inject = ['storageDomain', 'workspaceRegistry', 'agents', 'tools', 
 const source = z.object({session:z.string().optional(),message:z.string().optional(),origin:z.string().optional()}).strict();
 const snapshot = z.object({id:z.string(),workspaceId:z.string(),title:z.string().min(1).max(240),content:z.string().min(1).max(32000),kind:z.enum(core.KINDS),status:z.enum(core.STATUSES),enabled:z.boolean(),pinned:z.boolean(),source,expiresAt:z.string().nullable(),supersedes:z.string().nullable(),revision:z.number().int().positive(),createdAt:z.string(),updatedAt:z.string()}).strict();
 const settingsSchema = z.object({enabled:z.boolean(),suggestions:z.boolean(),budgetChars:z.number().int().min(1000).max(64000),excluded:z.array(z.string()).max(1000),semantic:z.boolean(),semanticThreshold:z.number().min(0).max(1)}).strict();
-const defaults = {enabled:true,suggestions:true,budgetChars:8000,excluded:[],semantic:true,semanticThreshold:0.5};
+const defaults = {enabled:true,suggestions:true,budgetChars:8000,excluded:[],semantic:true,semanticThreshold:0.55};
 // Global memory reuses the memories table under a reserved scope id. No real
 // workspace can hold it (workspace ids are UUIDs and the global store accepts
 // nothing else), so the two scopes can never read each other's records.

@@ -61,7 +61,7 @@ function renderPanel(selected,{draft=null,records=[],config=null}={}){
  function nodes(value){if(value==null||value===false)return [];if(Array.isArray(value))return value.flatMap(nodes);if(typeof value!=='object')return [value];if(typeof value.type==='function')return nodes(value.type(value.props));return [value,...nodes(value.props.children)];}
  return {all:nodes(tree),bodies,text:value=>nodes(value).filter(n=>typeof n==='string').join('')};
 }
-const settings={enabled:true,suggestions:true,budgetChars:8000,excluded:[],semantic:false,semanticThreshold:0.5};
+const settings={enabled:true,suggestions:true,budgetChars:8000,excluded:[],semantic:false,semanticThreshold:0.55};
 const draft=kind=>({title:'',content:'',kind,pinned:false,enabled:true,expiresAt:null,supersedes:null,source:{}});
 test('selecting the global scope requests global records and never a workspace id',()=>{
  const r=renderPanel('global');
