@@ -1,0 +1,92 @@
+{
+  "name": "dsh-workspace-memory",
+  "version": "0.1.1",
+  "description": "Workspace-scoped persistent memory, review and request transparency",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheSethRose/dsh-workspace-memory.git"
+  },
+  "homepage": "https://github.com/TheSethRose/dsh-workspace-memory#readme",
+  "bugs": {
+    "url": "https://github.com/TheSethRose/dsh-workspace-memory/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "plugin",
+    "memory",
+    "cordis"
+  ],
+  "type": "commonjs",
+  "main": "host.mjs",
+  "exports": {
+    ".": "./host.mjs",
+    "./client": "./client.js"
+  },
+  "files": [
+    "runtime-*.mjs",
+    "core-runtime-*.cjs",
+    "embeddings-runtime-*.cjs",
+    "build.test.cjs",
+    "host.mjs",
+    "core.js",
+    "client.js",
+    "embeddings.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "SEMANTIC-EVALUATION.md",
+    "build.cjs",
+    "core.test.js",
+    "integration.test.cjs",
+    "client.test.cjs",
+    "embeddings.test.cjs",
+    "retrieval-evaluation.cjs",
+    "apple-embedding-probe.swift",
+    "apple-embedding-evaluation.cjs",
+    "apple-embedding-evaluation-results.json",
+    "nomic-embedding-evaluation.cjs",
+    "nomic-embedding-evaluation-results.json",
+    "nomic-hybrid-evaluation-results.json"
+  ],
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node --test core.test.js integration.test.cjs client.test.cjs embeddings.test.cjs build.test.cjs",
+    "evaluate:retrieval": "node retrieval-evaluation.cjs",
+    "evaluate:apple": "node apple-embedding-evaluation.cjs",
+    "evaluate:nomic": "node nomic-embedding-evaluation.cjs"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh-system-prompt": "0.2.0-rc.2",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-storage-domain": "0.2.0-rc.2",
+    "@deepseek-ai/dsh-tools": "0.2.0-rc.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-storage-domain": {
+      "optional": true
+    },
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ]
+    }
+  }
+}

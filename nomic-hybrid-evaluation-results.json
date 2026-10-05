@@ -1,0 +1,272 @@
+{
+  "model": "nomic-embed-text:v1.5",
+  "endpoint": "http://127.0.0.1:11434",
+  "threshold": 0.5,
+  "groups": {
+    "exact": {
+      "cases": 8,
+      "recall": 8,
+      "top1": 8
+    },
+    "paraphrase": {
+      "cases": 8,
+      "recall": 8,
+      "top1": 8
+    },
+    "natural-paraphrase": {
+      "cases": 4,
+      "recall": 4,
+      "top1": 3
+    }
+  },
+  "negativeQueriesSelected": 2,
+  "negativeQueries": 5,
+  "rows": [
+    {
+      "group": "exact",
+      "query": "concise responses",
+      "target": "style",
+      "rank": 1,
+      "selected": [
+        "style",
+        "approval"
+      ],
+      "top1": "style"
+    },
+    {
+      "group": "exact",
+      "query": "TypeScript",
+      "target": "language",
+      "rank": 1,
+      "selected": [
+        "language",
+        "format"
+      ],
+      "top1": "language"
+    },
+    {
+      "group": "exact",
+      "query": "PostgreSQL",
+      "target": "storage",
+      "rank": 1,
+      "selected": [
+        "storage",
+        "format",
+        "approval"
+      ],
+      "top1": "storage"
+    },
+    {
+      "group": "exact",
+      "query": "offline processing",
+      "target": "privacy",
+      "rank": 1,
+      "selected": [
+        "privacy",
+        "approval"
+      ],
+      "top1": "privacy"
+    },
+    {
+      "group": "exact",
+      "query": "America/Chicago",
+      "target": "timezone",
+      "rank": 1,
+      "selected": [
+        "timezone"
+      ],
+      "top1": "timezone"
+    },
+    {
+      "group": "exact",
+      "query": "regression coverage",
+      "target": "testing",
+      "rank": 1,
+      "selected": [
+        "testing",
+        "approval",
+        "storage"
+      ],
+      "top1": "testing"
+    },
+    {
+      "group": "exact",
+      "query": "spreadsheet deliverables",
+      "target": "format",
+      "rank": 1,
+      "selected": [
+        "format",
+        "storage",
+        "approval"
+      ],
+      "top1": "format"
+    },
+    {
+      "group": "exact",
+      "query": "destructive operations",
+      "target": "approval",
+      "rank": 1,
+      "selected": [
+        "approval"
+      ],
+      "top1": "approval"
+    },
+    {
+      "group": "paraphrase",
+      "query": "terse replies",
+      "target": "style",
+      "rank": 1,
+      "selected": [
+        "style"
+      ],
+      "top1": "style"
+    },
+    {
+      "group": "paraphrase",
+      "query": "statically typed JavaScript",
+      "target": "language",
+      "rank": 1,
+      "selected": [
+        "language"
+      ],
+      "top1": "language"
+    },
+    {
+      "group": "paraphrase",
+      "query": "relational persistence backend",
+      "target": "storage",
+      "rank": 1,
+      "selected": [
+        "storage"
+      ],
+      "top1": "storage"
+    },
+    {
+      "group": "paraphrase",
+      "query": "never upload sensitive material",
+      "target": "privacy",
+      "rank": 1,
+      "selected": [
+        "privacy",
+        "approval"
+      ],
+      "top1": "privacy"
+    },
+    {
+      "group": "paraphrase",
+      "query": "Central US clock",
+      "target": "timezone",
+      "rank": 1,
+      "selected": [
+        "timezone",
+        "language"
+      ],
+      "top1": "timezone"
+    },
+    {
+      "group": "paraphrase",
+      "query": "verify repaired defects automatically",
+      "target": "testing",
+      "rank": 1,
+      "selected": [
+        "testing",
+        "approval"
+      ],
+      "top1": "testing"
+    },
+    {
+      "group": "paraphrase",
+      "query": "Excel workbook output",
+      "target": "format",
+      "rank": 1,
+      "selected": [
+        "format"
+      ],
+      "top1": "format"
+    },
+    {
+      "group": "paraphrase",
+      "query": "ask permission prior to erasure",
+      "target": "approval",
+      "rank": 1,
+      "selected": [
+        "approval",
+        "privacy",
+        "storage",
+        "testing"
+      ],
+      "top1": "approval"
+    },
+    {
+      "group": "natural-paraphrase",
+      "query": "How should you answer me?",
+      "target": "style",
+      "rank": 2,
+      "selected": [
+        "timezone",
+        "style",
+        "privacy",
+        "storage",
+        "approval",
+        "testing",
+        "language"
+      ],
+      "top1": "timezone"
+    },
+    {
+      "group": "natural-paraphrase",
+      "query": "Which language should we use?",
+      "target": "language",
+      "rank": 1,
+      "selected": [
+        "language",
+        "style",
+        "storage",
+        "timezone",
+        "privacy",
+        "testing",
+        "format",
+        "approval"
+      ],
+      "top1": "language"
+    },
+    {
+      "group": "natural-paraphrase",
+      "query": "Where should our app save information?",
+      "target": "storage",
+      "rank": 1,
+      "selected": [
+        "storage",
+        "privacy",
+        "timezone",
+        "language",
+        "approval",
+        "format",
+        "testing",
+        "style"
+      ],
+      "top1": "storage"
+    },
+    {
+      "group": "natural-paraphrase",
+      "query": "Can you send my private material to a cloud service?",
+      "target": "privacy",
+      "rank": 1,
+      "selected": [
+        "privacy",
+        "format",
+        "testing",
+        "approval",
+        "language",
+        "storage",
+        "style",
+        "timezone"
+      ],
+      "top1": "privacy"
+    }
+  ],
+  "stats": {
+    "requests": 26,
+    "texts": 33
+  }
+}

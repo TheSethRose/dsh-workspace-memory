@@ -1,0 +1,13 @@
+# Dependencies (installed by pnpm; never committed)
+node_modules/
+
+# macOS and editor cruft
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Logs and local scratch
+*.log
+npm-debug.log*
+pnpm-debug.log*

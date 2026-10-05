@@ -1,0 +1,3 @@
+- insert:
+    - id: workspace-memory
+      name: ./runtime-b0a4a82dab5d2955.mjs

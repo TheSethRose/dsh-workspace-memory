@@ -1,0 +1,2017 @@
+{
+  "endpoint": "http://127.0.0.1:11434",
+  "model": "nomic-embed-text:v1.5",
+  "dimensions": 768,
+  "prefixes": {},
+  "unprefixed": {
+    "measuredMs": 266,
+    "totalDurationNs": 241536292,
+    "prefix": "none",
+    "rows": [
+      {
+        "group": "exact",
+        "query": "concise responses",
+        "target": "style",
+        "ranking": [
+          {
+            "id": "style",
+            "score": 0.8696
+          },
+          {
+            "id": "approval",
+            "score": 0.4738
+          },
+          {
+            "id": "testing",
+            "score": 0.4408
+          },
+          {
+            "id": "format",
+            "score": 0.4126
+          },
+          {
+            "id": "language",
+            "score": 0.4037
+          },
+          {
+            "id": "storage",
+            "score": 0.4004
+          },
+          {
+            "id": "privacy",
+            "score": 0.3602
+          },
+          {
+            "id": "timezone",
+            "score": 0.3471
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "TypeScript",
+        "target": "language",
+        "ranking": [
+          {
+            "id": "language",
+            "score": 0.7815
+          },
+          {
+            "id": "format",
+            "score": 0.4285
+          },
+          {
+            "id": "testing",
+            "score": 0.3982
+          },
+          {
+            "id": "storage",
+            "score": 0.3841
+          },
+          {
+            "id": "approval",
+            "score": 0.3765
+          },
+          {
+            "id": "privacy",
+            "score": 0.3523
+          },
+          {
+            "id": "timezone",
+            "score": 0.3265
+          },
+          {
+            "id": "style",
+            "score": 0.3181
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "PostgreSQL",
+        "target": "storage",
+        "ranking": [
+          {
+            "id": "storage",
+            "score": 0.7614
+          },
+          {
+            "id": "format",
+            "score": 0.4853
+          },
+          {
+            "id": "approval",
+            "score": 0.4274
+          },
+          {
+            "id": "testing",
+            "score": 0.4182
+          },
+          {
+            "id": "privacy",
+            "score": 0.3953
+          },
+          {
+            "id": "timezone",
+            "score": 0.3768
+          },
+          {
+            "id": "language",
+            "score": 0.3635
+          },
+          {
+            "id": "style",
+            "score": 0.3441
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "offline processing",
+        "target": "privacy",
+        "ranking": [
+          {
+            "id": "privacy",
+            "score": 0.786
+          },
+          {
+            "id": "approval",
+            "score": 0.5224
+          },
+          {
+            "id": "testing",
+            "score": 0.4761
+          },
+          {
+            "id": "format",
+            "score": 0.4032
+          },
+          {
+            "id": "language",
+            "score": 0.3882
+          },
+          {
+            "id": "timezone",
+            "score": 0.3875
+          },
+          {
+            "id": "storage",
+            "score": 0.3739
+          },
+          {
+            "id": "style",
+            "score": 0.3546
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "America/Chicago",
+        "target": "timezone",
+        "ranking": [
+          {
+            "id": "timezone",
+            "score": 0.7165
+          },
+          {
+            "id": "storage",
+            "score": 0.3809
+          },
+          {
+            "id": "format",
+            "score": 0.3771
+          },
+          {
+            "id": "testing",
+            "score": 0.3753
+          },
+          {
+            "id": "style",
+            "score": 0.3538
+          },
+          {
+            "id": "approval",
+            "score": 0.3173
+          },
+          {
+            "id": "language",
+            "score": 0.3091
+          },
+          {
+            "id": "privacy",
+            "score": 0.294
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "regression coverage",
+        "target": "testing",
+        "ranking": [
+          {
+            "id": "testing",
+            "score": 0.792
+          },
+          {
+            "id": "approval",
+            "score": 0.4592
+          },
+          {
+            "id": "storage",
+            "score": 0.458
+          },
+          {
+            "id": "format",
+            "score": 0.4239
+          },
+          {
+            "id": "privacy",
+            "score": 0.3911
+          },
+          {
+            "id": "language",
+            "score": 0.3852
+          },
+          {
+            "id": "style",
+            "score": 0.3768
+          },
+          {
+            "id": "timezone",
+            "score": 0.3594
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "spreadsheet deliverables",
+        "target": "format",
+        "ranking": [
+          {
+            "id": "format",
+            "score": 0.8061
+          },
+          {
+            "id": "storage",
+            "score": 0.4919
+          },
+          {
+            "id": "testing",
+            "score": 0.477
+          },
+          {
+            "id": "approval",
+            "score": 0.4539
+          },
+          {
+            "id": "language",
+            "score": 0.4413
+          },
+          {
+            "id": "privacy",
+            "score": 0.4196
+          },
+          {
+            "id": "timezone",
+            "score": 0.4093
+          },
+          {
+            "id": "style",
+            "score": 0.4064
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "destructive operations",
+        "target": "approval",
+        "ranking": [
+          {
+            "id": "approval",
+            "score": 0.7084
+          },
+          {
+            "id": "privacy",
+            "score": 0.478
+          },
+          {
+            "id": "testing",
+            "score": 0.4707
+          },
+          {
+            "id": "language",
+            "score": 0.4062
+          },
+          {
+            "id": "format",
+            "score": 0.4025
+          },
+          {
+            "id": "storage",
+            "score": 0.3996
+          },
+          {
+            "id": "style",
+            "score": 0.3304
+          },
+          {
+            "id": "timezone",
+            "score": 0.3045
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "terse replies",
+        "target": "style",
+        "ranking": [
+          {
+            "id": "style",
+            "score": 0.6271
+          },
+          {
+            "id": "approval",
+            "score": 0.4167
+          },
+          {
+            "id": "privacy",
+            "score": 0.3806
+          },
+          {
+            "id": "language",
+            "score": 0.3764
+          },
+          {
+            "id": "testing",
+            "score": 0.3659
+          },
+          {
+            "id": "format",
+            "score": 0.3602
+          },
+          {
+            "id": "storage",
+            "score": 0.3514
+          },
+          {
+            "id": "timezone",
+            "score": 0.3163
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "statically typed JavaScript",
+        "target": "language",
+        "ranking": [
+          {
+            "id": "language",
+            "score": 0.5688
+          },
+          {
+            "id": "storage",
+            "score": 0.3686
+          },
+          {
+            "id": "testing",
+            "score": 0.3686
+          },
+          {
+            "id": "approval",
+            "score": 0.3671
+          },
+          {
+            "id": "style",
+            "score": 0.357
+          },
+          {
+            "id": "format",
+            "score": 0.346
+          },
+          {
+            "id": "timezone",
+            "score": 0.3276
+          },
+          {
+            "id": "privacy",
+            "score": 0.317
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "relational persistence backend",
+        "target": "storage",
+        "ranking": [
+          {
+            "id": "storage",
+            "score": 0.6258
+          },
+          {
+            "id": "language",
+            "score": 0.4446
+          },
+          {
+            "id": "testing",
+            "score": 0.4069
+          },
+          {
+            "id": "approval",
+            "score": 0.4051
+          },
+          {
+            "id": "format",
+            "score": 0.4038
+          },
+          {
+            "id": "privacy",
+            "score": 0.3738
+          },
+          {
+            "id": "style",
+            "score": 0.3151
+          },
+          {
+            "id": "timezone",
+            "score": 0.3135
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "never upload sensitive material",
+        "target": "privacy",
+        "ranking": [
+          {
+            "id": "privacy",
+            "score": 0.5613
+          },
+          {
+            "id": "approval",
+            "score": 0.5105
+          },
+          {
+            "id": "storage",
+            "score": 0.4282
+          },
+          {
+            "id": "format",
+            "score": 0.4129
+          },
+          {
+            "id": "language",
+            "score": 0.405
+          },
+          {
+            "id": "testing",
+            "score": 0.3673
+          },
+          {
+            "id": "style",
+            "score": 0.3216
+          },
+          {
+            "id": "timezone",
+            "score": 0.28
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "Central US clock",
+        "target": "timezone",
+        "ranking": [
+          {
+            "id": "timezone",
+            "score": 0.6612
+          },
+          {
+            "id": "testing",
+            "score": 0.3564
+          },
+          {
+            "id": "style",
+            "score": 0.3502
+          },
+          {
+            "id": "storage",
+            "score": 0.3056
+          },
+          {
+            "id": "approval",
+            "score": 0.3016
+          },
+          {
+            "id": "format",
+            "score": 0.2991
+          },
+          {
+            "id": "privacy",
+            "score": 0.2769
+          },
+          {
+            "id": "language",
+            "score": 0.2621
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "verify repaired defects automatically",
+        "target": "testing",
+        "ranking": [
+          {
+            "id": "testing",
+            "score": 0.6297
+          },
+          {
+            "id": "approval",
+            "score": 0.6007
+          },
+          {
+            "id": "storage",
+            "score": 0.4635
+          },
+          {
+            "id": "privacy",
+            "score": 0.4547
+          },
+          {
+            "id": "format",
+            "score": 0.4346
+          },
+          {
+            "id": "language",
+            "score": 0.4178
+          },
+          {
+            "id": "timezone",
+            "score": 0.4002
+          },
+          {
+            "id": "style",
+            "score": 0.3797
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "Excel workbook output",
+        "target": "format",
+        "ranking": [
+          {
+            "id": "format",
+            "score": 0.5549
+          },
+          {
+            "id": "approval",
+            "score": 0.4261
+          },
+          {
+            "id": "testing",
+            "score": 0.4084
+          },
+          {
+            "id": "privacy",
+            "score": 0.4004
+          },
+          {
+            "id": "storage",
+            "score": 0.3926
+          },
+          {
+            "id": "timezone",
+            "score": 0.3796
+          },
+          {
+            "id": "language",
+            "score": 0.3738
+          },
+          {
+            "id": "style",
+            "score": 0.3472
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "ask permission prior to erasure",
+        "target": "approval",
+        "ranking": [
+          {
+            "id": "approval",
+            "score": 0.6256
+          },
+          {
+            "id": "privacy",
+            "score": 0.5298
+          },
+          {
+            "id": "storage",
+            "score": 0.5039
+          },
+          {
+            "id": "testing",
+            "score": 0.447
+          },
+          {
+            "id": "style",
+            "score": 0.4005
+          },
+          {
+            "id": "language",
+            "score": 0.3931
+          },
+          {
+            "id": "format",
+            "score": 0.3635
+          },
+          {
+            "id": "timezone",
+            "score": 0.3566
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "How should you answer me?",
+        "target": "style",
+        "ranking": [
+          {
+            "id": "style",
+            "score": 0.6443
+          },
+          {
+            "id": "approval",
+            "score": 0.4591
+          },
+          {
+            "id": "storage",
+            "score": 0.4466
+          },
+          {
+            "id": "testing",
+            "score": 0.4232
+          },
+          {
+            "id": "timezone",
+            "score": 0.4176
+          },
+          {
+            "id": "privacy",
+            "score": 0.394
+          },
+          {
+            "id": "format",
+            "score": 0.3764
+          },
+          {
+            "id": "language",
+            "score": 0.3749
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "Which language should we use?",
+        "target": "language",
+        "ranking": [
+          {
+            "id": "storage",
+            "score": 0.5054
+          },
+          {
+            "id": "language",
+            "score": 0.5035
+          },
+          {
+            "id": "style",
+            "score": 0.4865
+          },
+          {
+            "id": "timezone",
+            "score": 0.4762
+          },
+          {
+            "id": "testing",
+            "score": 0.4602
+          },
+          {
+            "id": "privacy",
+            "score": 0.4517
+          },
+          {
+            "id": "approval",
+            "score": 0.4337
+          },
+          {
+            "id": "format",
+            "score": 0.3892
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "Where should our app save information?",
+        "target": "storage",
+        "ranking": [
+          {
+            "id": "storage",
+            "score": 0.5221
+          },
+          {
+            "id": "approval",
+            "score": 0.4974
+          },
+          {
+            "id": "privacy",
+            "score": 0.4826
+          },
+          {
+            "id": "testing",
+            "score": 0.4487
+          },
+          {
+            "id": "language",
+            "score": 0.4421
+          },
+          {
+            "id": "format",
+            "score": 0.4209
+          },
+          {
+            "id": "style",
+            "score": 0.4085
+          },
+          {
+            "id": "timezone",
+            "score": 0.4008
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "Can you send my private material to a cloud service?",
+        "target": "privacy",
+        "ranking": [
+          {
+            "id": "privacy",
+            "score": 0.5845
+          },
+          {
+            "id": "format",
+            "score": 0.4563
+          },
+          {
+            "id": "approval",
+            "score": 0.4489
+          },
+          {
+            "id": "storage",
+            "score": 0.4428
+          },
+          {
+            "id": "testing",
+            "score": 0.3901
+          },
+          {
+            "id": "language",
+            "score": 0.3602
+          },
+          {
+            "id": "style",
+            "score": 0.3195
+          },
+          {
+            "id": "timezone",
+            "score": 0.292
+          }
+        ]
+      }
+    ],
+    "negatives": [
+      {
+        "query": "volcanic seismology",
+        "top1": "approval",
+        "score": 0.4366
+      },
+      {
+        "query": "photosynthesis in ferns",
+        "top1": "privacy",
+        "score": 0.3994
+      },
+      {
+        "query": "Who won the football match?",
+        "top1": "style",
+        "score": 0.3947
+      },
+      {
+        "query": "How do I bake sourdough bread?",
+        "top1": "language",
+        "score": 0.4082
+      },
+      {
+        "query": "Explain lunar crater geology",
+        "top1": "style",
+        "score": 0.3938
+      }
+    ],
+    "sweeps": [
+      {
+        "threshold": 0.3,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 3
+          }
+        },
+        "negativeQueriesSelected": 5
+      },
+      {
+        "threshold": 0.4,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 3
+          }
+        },
+        "negativeQueriesSelected": 2
+      },
+      {
+        "threshold": 0.5,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 3
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.55,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 2,
+            "top1": 2
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.6,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 5,
+            "top1": 5
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 1,
+            "top1": 1
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.65,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 1,
+            "top1": 1
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.7,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 0,
+            "top1": 0
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.75,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 6,
+            "top1": 6
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 0,
+            "top1": 0
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.8,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 2,
+            "top1": 2
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 0,
+            "top1": 0
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      }
+    ]
+  },
+  "prefixed": {
+    "measuredMs": 313.6,
+    "totalDurationNs": 307073958,
+    "prefix": "nomic-v1.5",
+    "rows": [
+      {
+        "group": "exact",
+        "query": "concise responses",
+        "target": "style",
+        "ranking": [
+          {
+            "id": "style",
+            "score": 0.7531
+          },
+          {
+            "id": "approval",
+            "score": 0.5117
+          },
+          {
+            "id": "format",
+            "score": 0.4882
+          },
+          {
+            "id": "storage",
+            "score": 0.485
+          },
+          {
+            "id": "testing",
+            "score": 0.4709
+          },
+          {
+            "id": "privacy",
+            "score": 0.4545
+          },
+          {
+            "id": "language",
+            "score": 0.4388
+          },
+          {
+            "id": "timezone",
+            "score": 0.4219
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "TypeScript",
+        "target": "language",
+        "ranking": [
+          {
+            "id": "language",
+            "score": 0.78
+          },
+          {
+            "id": "format",
+            "score": 0.5519
+          },
+          {
+            "id": "storage",
+            "score": 0.5037
+          },
+          {
+            "id": "testing",
+            "score": 0.5025
+          },
+          {
+            "id": "privacy",
+            "score": 0.4938
+          },
+          {
+            "id": "approval",
+            "score": 0.4919
+          },
+          {
+            "id": "style",
+            "score": 0.469
+          },
+          {
+            "id": "timezone",
+            "score": 0.4485
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "PostgreSQL",
+        "target": "storage",
+        "ranking": [
+          {
+            "id": "storage",
+            "score": 0.7737
+          },
+          {
+            "id": "format",
+            "score": 0.5631
+          },
+          {
+            "id": "approval",
+            "score": 0.5159
+          },
+          {
+            "id": "privacy",
+            "score": 0.4937
+          },
+          {
+            "id": "testing",
+            "score": 0.4704
+          },
+          {
+            "id": "timezone",
+            "score": 0.4417
+          },
+          {
+            "id": "language",
+            "score": 0.4275
+          },
+          {
+            "id": "style",
+            "score": 0.4256
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "offline processing",
+        "target": "privacy",
+        "ranking": [
+          {
+            "id": "privacy",
+            "score": 0.7782
+          },
+          {
+            "id": "approval",
+            "score": 0.5583
+          },
+          {
+            "id": "testing",
+            "score": 0.4817
+          },
+          {
+            "id": "format",
+            "score": 0.4668
+          },
+          {
+            "id": "storage",
+            "score": 0.4465
+          },
+          {
+            "id": "timezone",
+            "score": 0.4248
+          },
+          {
+            "id": "language",
+            "score": 0.4175
+          },
+          {
+            "id": "style",
+            "score": 0.4131
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "America/Chicago",
+        "target": "timezone",
+        "ranking": [
+          {
+            "id": "timezone",
+            "score": 0.6798
+          },
+          {
+            "id": "format",
+            "score": 0.4437
+          },
+          {
+            "id": "storage",
+            "score": 0.4408
+          },
+          {
+            "id": "testing",
+            "score": 0.4362
+          },
+          {
+            "id": "style",
+            "score": 0.4104
+          },
+          {
+            "id": "approval",
+            "score": 0.3933
+          },
+          {
+            "id": "privacy",
+            "score": 0.3725
+          },
+          {
+            "id": "language",
+            "score": 0.3529
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "regression coverage",
+        "target": "testing",
+        "ranking": [
+          {
+            "id": "testing",
+            "score": 0.7929
+          },
+          {
+            "id": "storage",
+            "score": 0.5282
+          },
+          {
+            "id": "approval",
+            "score": 0.5219
+          },
+          {
+            "id": "format",
+            "score": 0.4888
+          },
+          {
+            "id": "privacy",
+            "score": 0.4857
+          },
+          {
+            "id": "language",
+            "score": 0.437
+          },
+          {
+            "id": "style",
+            "score": 0.4359
+          },
+          {
+            "id": "timezone",
+            "score": 0.4271
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "spreadsheet deliverables",
+        "target": "format",
+        "ranking": [
+          {
+            "id": "format",
+            "score": 0.8157
+          },
+          {
+            "id": "storage",
+            "score": 0.5581
+          },
+          {
+            "id": "approval",
+            "score": 0.5101
+          },
+          {
+            "id": "testing",
+            "score": 0.5037
+          },
+          {
+            "id": "privacy",
+            "score": 0.4814
+          },
+          {
+            "id": "language",
+            "score": 0.478
+          },
+          {
+            "id": "timezone",
+            "score": 0.4571
+          },
+          {
+            "id": "style",
+            "score": 0.4389
+          }
+        ]
+      },
+      {
+        "group": "exact",
+        "query": "destructive operations",
+        "target": "approval",
+        "ranking": [
+          {
+            "id": "approval",
+            "score": 0.7758
+          },
+          {
+            "id": "privacy",
+            "score": 0.513
+          },
+          {
+            "id": "testing",
+            "score": 0.4712
+          },
+          {
+            "id": "storage",
+            "score": 0.4668
+          },
+          {
+            "id": "format",
+            "score": 0.4648
+          },
+          {
+            "id": "language",
+            "score": 0.4255
+          },
+          {
+            "id": "style",
+            "score": 0.3914
+          },
+          {
+            "id": "timezone",
+            "score": 0.3615
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "terse replies",
+        "target": "style",
+        "ranking": [
+          {
+            "id": "style",
+            "score": 0.528
+          },
+          {
+            "id": "privacy",
+            "score": 0.4535
+          },
+          {
+            "id": "approval",
+            "score": 0.4509
+          },
+          {
+            "id": "format",
+            "score": 0.44
+          },
+          {
+            "id": "storage",
+            "score": 0.4359
+          },
+          {
+            "id": "testing",
+            "score": 0.419
+          },
+          {
+            "id": "language",
+            "score": 0.406
+          },
+          {
+            "id": "timezone",
+            "score": 0.3707
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "statically typed JavaScript",
+        "target": "language",
+        "ranking": [
+          {
+            "id": "language",
+            "score": 0.5816
+          },
+          {
+            "id": "storage",
+            "score": 0.4832
+          },
+          {
+            "id": "approval",
+            "score": 0.457
+          },
+          {
+            "id": "format",
+            "score": 0.4569
+          },
+          {
+            "id": "testing",
+            "score": 0.4474
+          },
+          {
+            "id": "privacy",
+            "score": 0.4428
+          },
+          {
+            "id": "style",
+            "score": 0.4333
+          },
+          {
+            "id": "timezone",
+            "score": 0.4155
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "relational persistence backend",
+        "target": "storage",
+        "ranking": [
+          {
+            "id": "storage",
+            "score": 0.6491
+          },
+          {
+            "id": "approval",
+            "score": 0.454
+          },
+          {
+            "id": "language",
+            "score": 0.4521
+          },
+          {
+            "id": "format",
+            "score": 0.4505
+          },
+          {
+            "id": "privacy",
+            "score": 0.4383
+          },
+          {
+            "id": "testing",
+            "score": 0.437
+          },
+          {
+            "id": "timezone",
+            "score": 0.3645
+          },
+          {
+            "id": "style",
+            "score": 0.363
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "never upload sensitive material",
+        "target": "privacy",
+        "ranking": [
+          {
+            "id": "privacy",
+            "score": 0.57
+          },
+          {
+            "id": "approval",
+            "score": 0.518
+          },
+          {
+            "id": "storage",
+            "score": 0.4823
+          },
+          {
+            "id": "format",
+            "score": 0.4572
+          },
+          {
+            "id": "language",
+            "score": 0.4121
+          },
+          {
+            "id": "testing",
+            "score": 0.3831
+          },
+          {
+            "id": "timezone",
+            "score": 0.3507
+          },
+          {
+            "id": "style",
+            "score": 0.3494
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "Central US clock",
+        "target": "timezone",
+        "ranking": [
+          {
+            "id": "timezone",
+            "score": 0.6291
+          },
+          {
+            "id": "format",
+            "score": 0.3977
+          },
+          {
+            "id": "testing",
+            "score": 0.3941
+          },
+          {
+            "id": "style",
+            "score": 0.3869
+          },
+          {
+            "id": "storage",
+            "score": 0.3798
+          },
+          {
+            "id": "approval",
+            "score": 0.3694
+          },
+          {
+            "id": "privacy",
+            "score": 0.3618
+          },
+          {
+            "id": "language",
+            "score": 0.3096
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "verify repaired defects automatically",
+        "target": "testing",
+        "ranking": [
+          {
+            "id": "testing",
+            "score": 0.6155
+          },
+          {
+            "id": "approval",
+            "score": 0.6037
+          },
+          {
+            "id": "privacy",
+            "score": 0.5053
+          },
+          {
+            "id": "storage",
+            "score": 0.5019
+          },
+          {
+            "id": "format",
+            "score": 0.4845
+          },
+          {
+            "id": "timezone",
+            "score": 0.4488
+          },
+          {
+            "id": "language",
+            "score": 0.4199
+          },
+          {
+            "id": "style",
+            "score": 0.4198
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "Excel workbook output",
+        "target": "format",
+        "ranking": [
+          {
+            "id": "format",
+            "score": 0.5783
+          },
+          {
+            "id": "approval",
+            "score": 0.4762
+          },
+          {
+            "id": "timezone",
+            "score": 0.456
+          },
+          {
+            "id": "storage",
+            "score": 0.4557
+          },
+          {
+            "id": "privacy",
+            "score": 0.4518
+          },
+          {
+            "id": "testing",
+            "score": 0.4269
+          },
+          {
+            "id": "language",
+            "score": 0.4076
+          },
+          {
+            "id": "style",
+            "score": 0.4068
+          }
+        ]
+      },
+      {
+        "group": "paraphrase",
+        "query": "ask permission prior to erasure",
+        "target": "approval",
+        "ranking": [
+          {
+            "id": "approval",
+            "score": 0.6067
+          },
+          {
+            "id": "privacy",
+            "score": 0.5585
+          },
+          {
+            "id": "storage",
+            "score": 0.5458
+          },
+          {
+            "id": "testing",
+            "score": 0.4552
+          },
+          {
+            "id": "style",
+            "score": 0.4399
+          },
+          {
+            "id": "format",
+            "score": 0.4342
+          },
+          {
+            "id": "timezone",
+            "score": 0.4322
+          },
+          {
+            "id": "language",
+            "score": 0.4089
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "How should you answer me?",
+        "target": "style",
+        "ranking": [
+          {
+            "id": "style",
+            "score": 0.6446
+          },
+          {
+            "id": "privacy",
+            "score": 0.5521
+          },
+          {
+            "id": "approval",
+            "score": 0.5381
+          },
+          {
+            "id": "storage",
+            "score": 0.5345
+          },
+          {
+            "id": "testing",
+            "score": 0.5321
+          },
+          {
+            "id": "timezone",
+            "score": 0.5256
+          },
+          {
+            "id": "format",
+            "score": 0.497
+          },
+          {
+            "id": "language",
+            "score": 0.481
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "Which language should we use?",
+        "target": "language",
+        "ranking": [
+          {
+            "id": "language",
+            "score": 0.6188
+          },
+          {
+            "id": "style",
+            "score": 0.6064
+          },
+          {
+            "id": "storage",
+            "score": 0.6056
+          },
+          {
+            "id": "timezone",
+            "score": 0.5921
+          },
+          {
+            "id": "privacy",
+            "score": 0.5901
+          },
+          {
+            "id": "testing",
+            "score": 0.5826
+          },
+          {
+            "id": "format",
+            "score": 0.5544
+          },
+          {
+            "id": "approval",
+            "score": 0.5511
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "Where should our app save information?",
+        "target": "storage",
+        "ranking": [
+          {
+            "id": "storage",
+            "score": 0.602
+          },
+          {
+            "id": "privacy",
+            "score": 0.5979
+          },
+          {
+            "id": "approval",
+            "score": 0.5693
+          },
+          {
+            "id": "testing",
+            "score": 0.5401
+          },
+          {
+            "id": "format",
+            "score": 0.5384
+          },
+          {
+            "id": "language",
+            "score": 0.5327
+          },
+          {
+            "id": "timezone",
+            "score": 0.5325
+          },
+          {
+            "id": "style",
+            "score": 0.5134
+          }
+        ]
+      },
+      {
+        "group": "natural-paraphrase",
+        "query": "Can you send my private material to a cloud service?",
+        "target": "privacy",
+        "ranking": [
+          {
+            "id": "privacy",
+            "score": 0.6194
+          },
+          {
+            "id": "format",
+            "score": 0.5256
+          },
+          {
+            "id": "storage",
+            "score": 0.5169
+          },
+          {
+            "id": "approval",
+            "score": 0.5063
+          },
+          {
+            "id": "testing",
+            "score": 0.4545
+          },
+          {
+            "id": "language",
+            "score": 0.4254
+          },
+          {
+            "id": "style",
+            "score": 0.3991
+          },
+          {
+            "id": "timezone",
+            "score": 0.3896
+          }
+        ]
+      }
+    ],
+    "negatives": [
+      {
+        "query": "volcanic seismology",
+        "top1": "approval",
+        "score": 0.4558
+      },
+      {
+        "query": "photosynthesis in ferns",
+        "top1": "privacy",
+        "score": 0.4093
+      },
+      {
+        "query": "Who won the football match?",
+        "top1": "style",
+        "score": 0.4717
+      },
+      {
+        "query": "How do I bake sourdough bread?",
+        "top1": "approval",
+        "score": 0.4471
+      },
+      {
+        "query": "Explain lunar crater geology",
+        "top1": "approval",
+        "score": 0.4683
+      }
+    ],
+    "sweeps": [
+      {
+        "threshold": 0.3,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 4
+          }
+        },
+        "negativeQueriesSelected": 5
+      },
+      {
+        "threshold": 0.4,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 4
+          }
+        },
+        "negativeQueriesSelected": 5
+      },
+      {
+        "threshold": 0.5,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 4
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.55,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 7,
+            "top1": 7
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 4
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.6,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 4,
+            "top1": 4
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 4,
+            "top1": 4
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.65,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 8,
+            "top1": 8
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 0,
+            "top1": 0
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.7,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 7,
+            "top1": 7
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 0,
+            "top1": 0
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.75,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 7,
+            "top1": 7
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 0,
+            "top1": 0
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      },
+      {
+        "threshold": 0.8,
+        "groups": {
+          "exact": {
+            "cases": 8,
+            "recall": 1,
+            "top1": 1
+          },
+          "paraphrase": {
+            "cases": 8,
+            "recall": 0,
+            "top1": 0
+          },
+          "natural-paraphrase": {
+            "cases": 4,
+            "recall": 0,
+            "top1": 0
+          }
+        },
+        "negativeQueriesSelected": 0
+      }
+    ]
+  },
+  "scope": "synthetic authored diagnostic fixtures; threshold sweep is exploratory, not held-out validation; semantic-only ranking, not the production hybrid; single-run latency on one machine"
+}
